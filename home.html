@@ -7,11 +7,11 @@
     <link rel="stylesheet" href="style.css">
     <style>
         /* Global Reset */
-        * {
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
             margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Times New Roman', serif;
         }
 
         /* Navigation Bar */
@@ -20,7 +20,7 @@
             justify-content: center;
             align-items: center;
             padding: 15px;
-            background: rgba(0, 0, 0, 0.7);
+            background: rgb(0, 0, 0);
             position: fixed;
             width: 100%;
             top: 0;
@@ -52,14 +52,17 @@
 
         /* Main Section */
         .main {
-            width: 100%;
-            height: 100vh;
-            background: url('moonlight-beach-night-view-v9jjrttbajuwp637.jpg') no-repeat center center/cover;
-            position: relative;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center; /* Center content vertically */
+            align-items: center;
             text-align: center;
-            color: white;
-            z-index: 1;
+            background: url('images/moon.jpg') no-repeat center center/cover;
+            width: 100%;
+            height: 100vh; /* Ensure it takes full height */
         }
+
 
         /* Profile Image */
         .profile-img {
@@ -150,15 +153,16 @@
             display: block;
         }
 
-        /* Footer */
+     /* Footer */
         .footer {
-            position: absolute;
-            bottom: 10px;
             width: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
             text-align: center;
+            padding: 15px;
             font-size: 14px;
-            color: rgb(20, 20, 20);
         }
+
 
         /* Smooth Scrolling */
         html {
@@ -169,19 +173,19 @@
 <body>
 
     <!-- Navigation -->
-    <div class="navbar">
+    <nav class="navbar">
         <ul>
-            <li><a href="#home">🏠 HOME</a></li>
-            <li><a href="#about">👤 ABOUT</a></li>
-            <li><a href="#service">💼 SERVICE</a></li>
-            <li><a href="#design">🎨 DESIGN</a></li>
-            <li><a href="#contact">📞 CONTACT</a></li>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="video.html">Video</a></li>
         </ul>
-    </div>
+    </nav>
 
     <!-- Main Section -->
-    <div class="main">
-        <img src=".vscode/DESZEL.jpg" class="profile-img" alt="Profile Image">
+    <div id= "home" class="main">
+        <img src="images/DESZEL.jpg" class="profile-img" alt="Profile Image">
         <div class="info">
             <h3>Hi, we are <span>DESZEL</span> 🚀.</h3>
             <h1>Future <span>Web Designers</span> 🎨</h1>
@@ -191,13 +195,13 @@
     </div>
 
     <!-- Content Sections -->
-    <div id="home" class="content active">
+    <!-- <div id="home" class="content active">
         <h2>🏠 Home</h2>
         <p>Welcome to our portfolio! We are passionate web designers eager to create stunning websites. 🎉</p>
-    </div>
+    </div> -->
 
     <div id="about" class="content">
-        <h2>👤 About Us</h2>
+        <h2>👤 About</h2>
         <p>We are students from Cebu Eastern College, specializing in web design and front-end development. 🖥️</p>
     </div>
 
@@ -233,23 +237,30 @@
         </form>
     </section>
 
-    <!-- Footer -->
-    <div class="footer">
-        &copy; 2025 DESZEL | All rights reserved. 🌟
-    </div>
-
+   
     <script>
         function showForm() {
             var form = document.getElementById("inquiry-form");
-            form.style.display = "block"; // Show the form
-            form.scrollIntoView({ behavior: "smooth" }); // Scroll to the form smoothly
+            if (form) {
+                form.style.display = "block"; // Show the form
+                form.scrollIntoView({ behavior: "smooth" });
+            }
         }
-
-        function submitForm(event) {
-            event.preventDefault();
-            alert("📩 Inquiry Submitted! We'll get back to you soon.");
+    
+        function hideForm() {
+            var form = document.getElementById("inquiry-form");
+            if (form) {
+                form.style.display = "none";
+            }
         }
     </script>
+    
+     <!-- Footer -->
+   <!-- Footer -->
+   <footer class="footer">
+    <p>&copy; 2025 DESZEL | All rights reserved. 🌟</p>
+</footer>
+
 
 </body>
 </html>

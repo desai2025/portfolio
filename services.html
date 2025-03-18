@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services | 🚀 My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: 'Times New Roman', serif;
+            margin: 0;
+            padding: 0;
+            background: #222;
+            color: white;
+            text-align: center;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 15px;
+            background: rgb(0, 0, 0);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            padding: 0;
+        }
+
+        .navbar ul li a {
+            color: orange;
+            font-size: 18px;
+            font-weight: bold;
+            text-decoration: none;
+            transition: 0.4s ease;
+            cursor: pointer;
+        }
+
+        .navbar ul li a:hover {
+            color: rgb(50, 245, 24);
+            border-bottom: 2px solid #acb6e5;
+        }
+
+        .services-container {
+            padding: 100px 20px 40px;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .services-container h1 {
+            font-size: 40px;
+            color: #ff7200;
+        }
+
+        .service-item {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+        }
+
+        .service-item h2 {
+            color: #74ebd5;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="video.html">Videos</a></li>
+        </ul>
+    </nav>
+
+    <!-- Services Section -->
+    <div class="services-container">
+        <h1>Our Services</h1>
+        
+        <div class="service-item">
+            <h2>🌐 Web Design</h2>
+            <p>We create visually appealing and user-friendly website designs tailored to your needs.</p>
+        </div>
+
+        <div class="service-item">
+            <h2>🎨 UI/UX Improvements</h2>
+            <p>Enhancing user experience with modern and interactive design elements.</p>
+        </div>
+
+        <div class="service-item">
+            <h2>💻 Front-End Development</h2>
+            <p>Bringing designs to life using HTML, CSS, and JavaScript for responsive web pages.</p>
+        </div>
+    </div>
+
+</body>
+</html>

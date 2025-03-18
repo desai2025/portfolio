@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | 🚀 My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #0f0c29, #423d7e, #29295e);
+            color: white;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 15px;
+            background: black;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            padding: 0;
+        }
+
+        .navbar ul li a {
+            color: orange;
+            font-size: 18px;
+            font-weight: bold;
+            text-decoration: none;
+            transition: 0.4s ease;
+        }
+
+        .navbar ul li a:hover {
+            color: rgb(50, 245, 24);
+            border-bottom: 2px solid #acb6e5;
+        }
+
+        .about-card {
+            width: 400px;
+            height: 500px;
+            perspective: 1000px;
+            margin-top: 100px;
+        }
+
+        .card-inner {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            transform-style: preserve-3d;
+            transition: transform 0.6s;
+        }
+
+        .about-card:hover .card-inner,
+        .about-card.clicked .card-inner {
+            transform: rotateY(180deg);
+        }
+
+        .card-front, .card-back {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            backface-visibility: hidden;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .card-front {
+            background: url('images/DESZEL.jpg') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            font-weight: bold;
+            color: white;
+            flex-direction: column;
+        }
+
+        .card-front::before {
+            content: '"Touch Me"';
+            font-size: 22px;
+            margin-bottom: 400px;
+            color: #000000;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+        }
+
+        .card-back {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            transform: rotateY(180deg);
+            text-align: justify;
+        }
+
+        .card-back p {
+            width: 95%;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="video.html">Videos</a></li>
+        </ul>
+    </nav>
+
+    <!-- About Section -->
+    <div class="about-card" onclick="flipCard(this)">
+        <div class="card-inner">
+            <div class="card-front"></div>
+            <div class="card-back">
+                <h2>About Us</h2>
+                <p>We are DESZEL 🚀, students from Cebu Eastern College specializing in web design and front-end development. Passionate about creating modern, user-friendly, and visually appealing websites, we are constantly learning and improving our skills in HTML and CSS.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function flipCard(card) {
+            card.classList.toggle("clicked");
+        }
+    </script>
+</body>
+</html>
