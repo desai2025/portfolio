@@ -118,11 +118,11 @@
     <!-- Navigation -->
     <nav class="navbar">
         <ul>
-            <li><a href="home.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="video.html">Video</a></li>
+            <li><a href="home.html">🏠 Home</a></li>
+                <li><a href="about.html">ℹ️ About</a></li>
+                <li><a href="services.html">🛠️ Services</a></li>
+                <li><a href="contact.html">📞 Contact</a></li>
+                <li><a href="video.html">🎥 Videos</a></li>
         </ul>
     </nav>
 
@@ -160,6 +160,15 @@
             referrerpolicy="no-referrer-when-downgrade">
         </iframe>
     </div>
+    
+    <script>
+            document.querySelector(".contact-form form").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevents the default form submission
+            alert("✅ Your message has been sent successfully!");
+            this.reset(); // Clears the form fields
+        });
+    </script>
+    
 
 </body>
 </html>
